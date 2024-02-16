@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="png.x-image" href="favicon.png" />
+    <title>Steel Column Axial Capacity</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="column-app">
+        <h2>Column Axial Capacity</h2>
+        <form method="POST" action="" enctype="multipart/form-data">
+          <label for="moment_of_inertia">Section Moment of Inertia (in4):</label
+          ><br />
+          <input
+            type="number"
+            id="moment_of_inertia"
+            name="moment_of_inertia"
+          /><br />
+          <label for="section_area">Section Area (in2):</label><br />
+          <input type="float" id="section_area" name="section_area" /><br />
+          <label for="k_l">Unbraced Length (ft):</label><br />
+          <input type="number" id="k_l" name="k_l" /><br />
+          <label for="steel_modulus_of_elasticity"
+            >Steel Modulus of Elasticity (ksi):</label
+          ><br />
+          <input
+            type="number"
+            id="steel_modulus_of_elasticity"
+            name="steel_modulus_of_elasticity"
+          /><br />
+          <label for="steel_yield_stress">Steel Yield Stress (ksi):</label
+          ><br />
+          <input
+            type="number"
+            id="steel_yield_stress"
+            name="steel_yield_stress"
+          /><br />
+          <br />
+          <button id ="resultsbutton"type="submit">Submit</button>
+          <br />
+
+          <!-- {% for message in get_flashed_messages() %}
+      <p style="color:blue">{{ message }}</p>
+      {% endfor %} -->
+        </form>
+        <div id="output"></div>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
